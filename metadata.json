@@ -1,0 +1,6 @@
+{
+  "name": "AuraHome Automation",
+  "description": "Bespoke smart home engineering for premier residences, featuring Lutron Ketra lighting orchestration, defense-grade integrated estate security, Crestron NVX 4K AV, and zero-clutter climate automation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,1625 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuraHome Automation | Bespoke Smart Home Engineering & Luxury Living</title>
+    <meta name="description" content="Bespoke smart home engineering for premier residences, featuring Lutron Ketra lighting orchestration, defense-grade integrated estate security, Crestron NVX 4K AV, and zero-clutter climate automation." />
+    <meta property="og:title" content="AuraHome Automation | The Future of Living, Tailored to You" />
+    <meta property="og:description" content="Bespoke smart home engineering for premier residences, featuring Lutron Ketra lighting orchestration, defense-grade integrated estate security, Crestron NVX 4K AV, and zero-clutter climate automation." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              aura: {
+                black: '#080A0F',
+                charcoal: '#0F1219',
+                surface: '#161B26',
+                surfaceHover: '#1E2433',
+                border: '#242C3D',
+                borderLight: '#323D54',
+                gold: '#C5A059',
+                goldHover: '#B28E46',
+                goldLight: '#E8D4B0',
+                goldMuted: 'rgba(197, 160, 89, 0.12)',
+                bronze: '#8C6D37',
+                slateMuted: '#8B98A5',
+                chalk: '#F0F2F5'
+              }
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              serif: ['"Playfair Display"', 'Georgia', 'serif'],
+              display: ['"Cinzel"', 'serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      /* Custom architectural scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #080A0F;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #242C3D;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #C5A059;
+      }
+
+      /* Architectural subtle metallic text */
+      .metallic-gold-text {
+        background: linear-gradient(135deg, #FFFFFF 20%, #E8D4B0 60%, #C5A059 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Architectural subtle blueprint grid background */
+      .architectural-grid {
+        background-image: linear-gradient(to right, rgba(36, 44, 61, 0.35) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(36, 44, 61, 0.35) 1px, transparent 1px);
+        background-size: 64px 64px;
+      }
+    </style>
+  </head>
+
+  <body class="bg-aura-black text-slate-100 font-sans antialiased selection:bg-aura-gold selection:text-aura-black">
+    
+    <!-- ========================================================================= -->
+    <!-- 1. NAVIGATION BAR -->
+    <!-- ========================================================================= -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-aura-black/60 backdrop-blur-md border-b border-aura-border/50 py-4">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
+        
+        <!-- Real Architectural Brand Logo -->
+        <a href="#" id="brand-logo" class="flex items-center gap-3.5 group focus:outline-none" aria-label="AuraHome Automation - Home">
+          <!-- Handcrafted Architectural Monogram SVG -->
+          <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-aura-surface to-aura-charcoal border border-aura-border flex items-center justify-center p-2 shadow-inner group-hover:border-aura-gold/70 transition-all duration-300">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+              <!-- Geometric Architectural "A" Monogram with Precision Aperture & Circuit Traces -->
+              <path d="M22 4L39 37H31.5L22 17.5L12.5 37H5L22 4Z" fill="url(#aura-gold-grad)" fill-opacity="0.95" />
+              <polygon points="22,12 30,30 14,30" stroke="#0F1219" stroke-width="1.8" fill="#161B26" />
+              <!-- Central Aperture Core -->
+              <circle cx="22" cy="24" r="2.8" fill="url(#aura-gold-grad)" />
+              <line x1="22" y1="4" x2="22" y2="10" stroke="#E8D4B0" stroke-width="1.5" stroke-linecap="round" />
+              <line x1="12" y1="37" x2="32" y2="37" stroke="#E8D4B0" stroke-width="1.5" stroke-linecap="round" />
+              <!-- Subtle Floorplan Measurement Nodes -->
+              <circle cx="5" cy="37" r="1.5" fill="#E8D4B0" />
+              <circle cx="39" cy="37" r="1.5" fill="#E8D4B0" />
+              <circle cx="22" cy="4" r="1.5" fill="#E8D4B0" />
+              <defs>
+                <linearGradient id="aura-gold-grad" x1="5" y1="4" x2="39" y2="37" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FFFFFF" />
+                  <stop offset="40%" stop-color="#E8D4B0" />
+                  <stop offset="100%" stop-color="#C5A059" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="text-xl font-display font-bold tracking-[0.2em] text-white">AURA<span class="text-aura-gold">HOME</span></span>
+            </div>
+            <span class="font-mono text-[9px] uppercase tracking-[0.28em] text-slate-400 font-medium -mt-0.5">
+              Architectural Systems • CEDIA
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-300" aria-label="Primary Navigation">
+          <a href="#services" class="hover:text-aura-gold transition-colors duration-200">Engineering</a>
+          <a href="#interactive-console" class="hover:text-aura-gold transition-colors duration-200 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Living Console</span>
+          </a>
+          <a href="#why-us" class="hover:text-aura-gold transition-colors duration-200">The Equipment Rack</a>
+          <a href="#testimonials" class="hover:text-aura-gold transition-colors duration-200">Portfolios</a>
+          <a href="#booking" class="hover:text-aura-gold transition-colors duration-200">Consultation</a>
+        </nav>
+
+        <!-- Desktop CTA Button -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#booking" id="nav-cta-btn" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider text-aura-black bg-gradient-to-r from-aura-goldLight via-aura-gold to-aura-goldHover shadow-md hover:shadow-aura-gold/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
+            <span>Book Consultation</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" type="button" class="md:hidden p-2.5 rounded-lg bg-aura-surface border border-aura-border text-slate-300 hover:text-white hover:border-aura-gold/50 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i id="menu-icon-open" data-lucide="menu" class="w-5 h-5"></i>
+          <i id="menu-icon-close" data-lucide="x" class="w-5 h-5 hidden"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-[65px] bg-aura-charcoal/98 border-b border-aura-border backdrop-blur-xl px-6 py-6 shadow-2xl transition-all duration-300">
+        <nav class="flex flex-col gap-4 text-sm font-medium text-slate-200">
+          <a href="#services" class="mobile-nav-link py-2.5 border-b border-aura-border/40 flex items-center justify-between hover:text-aura-gold">
+            <span>Systems &amp; Engineering</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+          </a>
+          <a href="#interactive-console" class="mobile-nav-link py-2.5 border-b border-aura-border/40 flex items-center justify-between hover:text-aura-gold">
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>Living Scene Console</span>
+            </span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+          </a>
+          <a href="#why-us" class="mobile-nav-link py-2.5 border-b border-aura-border/40 flex items-center justify-between hover:text-aura-gold">
+            <span>Equipment Vault Standards</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+          </a>
+          <a href="#testimonials" class="mobile-nav-link py-2.5 border-b border-aura-border/40 flex items-center justify-between hover:text-aura-gold">
+            <span>Architectural Portfolios</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+          </a>
+          <a href="#booking" class="mobile-nav-link py-2.5 border-b border-aura-border/40 flex items-center justify-between hover:text-aura-gold">
+            <span>Client Intake &amp; Blueprint Upload</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+          </a>
+          <div class="pt-3">
+            <a href="#booking" class="mobile-nav-link w-full py-3 rounded-lg flex items-center justify-center gap-2 font-semibold text-xs uppercase tracking-wider text-aura-black bg-gradient-to-r from-aura-goldLight to-aura-gold shadow-md">
+              <span>Book Private Consultation</span>
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    <!-- ========================================================================= -->
+    <!-- 2. HERO SECTION -->
+    <!-- ========================================================================= -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 sm:px-8 overflow-hidden architectural-grid">
+      <!-- High-Resolution Architectural Photography -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=85" 
+          alt="Architectural smart residence featuring concealed linear lighting reveals and minimal keypads" 
+          class="w-full h-full object-cover object-center filter brightness-40 contrast-105"
+          loading="eager"
+        />
+        <!-- Architectural Vignette & Framing -->
+        <div class="absolute inset-0 bg-gradient-to-b from-aura-black/95 via-aura-black/80 to-aura-black"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-aura-black/90 via-transparent to-aura-black/90"></div>
+        <!-- Architectural Axis Crosshairs -->
+        <div class="absolute top-20 left-12 hidden lg:flex items-center gap-2 font-mono text-[10px] text-slate-500 uppercase tracking-widest pointer-events-none">
+          <span class="text-aura-gold">AXIS-01</span> // LAT 34.0736° N, LONG 118.4004° W
+        </div>
+        <div class="absolute top-20 right-12 hidden lg:flex items-center gap-2 font-mono text-[10px] text-slate-500 uppercase tracking-widest pointer-events-none">
+          SPEC: CEDIA ESC-T / R-10 / 48U RACK MATRIX
+        </div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
+        
+        <!-- Authentic Industry Credentials Header -->
+        <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-aura-charcoal/90 border border-aura-border text-xs font-mono tracking-wider text-slate-300 mb-8 backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-aura-gold"></span>
+          <span class="text-white font-semibold">CEDIA MASTER INTEGRATOR</span>
+          <span class="text-slate-500">•</span>
+          <span class="text-aura-goldLight">LUTRON &amp; CRESTRON RESIDENTIAL</span>
+        </div>
+
+        <!-- Hero Headline -->
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-bold tracking-tight leading-[1.12] mb-6 max-w-4xl text-balance">
+          <span class="metallic-gold-text">The Future of Living,</span>
+          <br />
+          <span class="text-white">Tailored to You.</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-base sm:text-xl text-slate-300 font-normal max-w-3xl leading-relaxed mb-10 text-balance">
+          Architectural lighting orchestration, defense-grade integrated estate security, and precision multi-zone climate control—engineered invisibly into your residence with zero visual clutter.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+          <a href="#booking" id="hero-primary-cta" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-lg text-sm font-semibold uppercase tracking-wider text-aura-black bg-gradient-to-r from-aura-goldLight via-aura-gold to-aura-goldHover shadow-lg hover:shadow-aura-gold/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
+            <span>Book Private Consultation</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#interactive-console" id="hero-secondary-cta" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-lg text-sm font-semibold uppercase tracking-wider text-white bg-aura-surface/90 border border-aura-border hover:border-aura-gold/60 hover:bg-aura-surfaceHover backdrop-blur-md transition-all duration-200">
+            <i data-lucide="sliders" class="w-4 h-4 text-aura-gold"></i>
+            <span>Test Living Console</span>
+          </a>
+        </div>
+
+        <!-- Real Integrator Industry Badges -->
+        <div class="mt-16 pt-8 border-t border-aura-border/60 grid grid-cols-2 sm:grid-cols-4 gap-6 text-left w-full">
+          
+          <div class="p-4 rounded-xl bg-aura-surface/60 border border-aura-border flex items-center gap-3.5">
+            <div class="w-9 h-9 rounded-lg bg-aura-charcoal border border-aura-border flex items-center justify-center text-aura-gold shrink-0">
+              <i data-lucide="sun-medium" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white tracking-wide">Lutron Ketra</p>
+              <p class="text-[11px] text-slate-400">Full Circadian &amp; Shades</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-aura-surface/60 border border-aura-border flex items-center gap-3.5">
+            <div class="w-9 h-9 rounded-lg bg-aura-charcoal border border-aura-border flex items-center justify-center text-aura-gold shrink-0">
+              <i data-lucide="server" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white tracking-wide">Crestron NVX</p>
+              <p class="text-[11px] text-slate-400">Uncompressed 4K Matrix</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-aura-surface/60 border border-aura-border flex items-center gap-3.5">
+            <div class="w-9 h-9 rounded-lg bg-aura-charcoal border border-aura-border flex items-center justify-center text-aura-gold shrink-0">
+              <i data-lucide="volume-2" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white tracking-wide">Sonance Invisible</p>
+              <p class="text-[11px] text-slate-400">Plaster-In Hidden Audio</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-aura-surface/60 border border-aura-border flex items-center gap-3.5">
+            <div class="w-9 h-9 rounded-lg bg-aura-charcoal border border-aura-border flex items-center justify-center text-aura-gold shrink-0">
+              <i data-lucide="shield-check" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white tracking-wide">Local Privacy</p>
+              <p class="text-[11px] text-slate-400">Zero-Cloud Dependency</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- 3. SERVICES GRID -->
+    <!-- ========================================================================= -->
+    <section id="services" class="py-28 px-6 sm:px-8 bg-gradient-to-b from-aura-black via-aura-charcoal to-aura-black relative">
+      <div class="max-w-7xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-aura-surface border border-aura-border text-xs font-semibold uppercase tracking-[0.2em] text-aura-gold mb-4">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+            <span>Bespoke Engineering</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-serif font-bold tracking-tight text-white mb-4">
+            Mastery Across Every Touchpoint
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg">
+            We merge invisible architecture with state-of-the-art computational intelligence to elevate your estate's comfort, security, and acoustic elegance.
+          </p>
+        </div>
+
+        <!-- 3 Services Cards Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- Service Card 1: Smart Lighting -->
+          <article class="group relative rounded-2xl bg-aura-surface border border-aura-border overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-aura-gold/60 hover:shadow-2xl hover:shadow-aura-gold/10 flex flex-col">
+            <!-- Card Image -->
+            <div class="relative h-64 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80" 
+                alt="Architectural smart lighting and interior mood scene" 
+                class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 filter brightness-90"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-aura-surface via-aura-surface/40 to-transparent"></div>
+              <div class="absolute top-4 left-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-aura-black/80 backdrop-blur-md border border-aura-border text-aura-goldLight">
+                  <i data-lucide="sun-medium" class="w-3 h-3 text-aura-gold"></i>
+                  Lutron Ketra Certified
+                </span>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-aura-charcoal border border-aura-border flex items-center justify-center text-aura-gold mb-6 group-hover:border-aura-gold transition-colors">
+                  <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-serif font-bold text-white mb-3 group-hover:text-aura-gold transition-colors">
+                  Architectural Smart Lighting
+                </h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                  Experience natural circadian rhythm synchronization that subtly mirrors sunlight throughout the day, integrated with museum-grade 0.1% micro-dimming and silent motorized shades.
+                </p>
+                <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-aura-gold shrink-0"></i>
+                    <span>Custom laser-engraved keypad scene selectors</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-aura-gold shrink-0"></i>
+                    <span>Full-spectrum Ketra circadian color calibration</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-aura-gold shrink-0"></i>
+                    <span>Automated astronomical dusk-to-dawn scenes</span>
+                  </li>
+                </ul>
+              </div>
+
+              <a href="#booking" class="inline-flex items-center gap-2 text-sm font-semibold text-aura-gold hover:text-white transition-colors group-hover:translate-x-1 duration-200">
+                <span>Design Your Lighting System</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Service Card 2: Integrated Security -->
+          <article class="group relative rounded-2xl bg-aura-surface border border-aura-border overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-aura-gold/60 hover:shadow-2xl hover:shadow-aura-gold/10 flex flex-col">
+            <!-- Card Image -->
+            <div class="relative h-64 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1000&q=80" 
+                alt="Sleek biometric security interface and smart access portal" 
+                class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 filter brightness-90"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-aura-surface via-aura-surface/40 to-transparent"></div>
+              <div class="absolute top-4 left-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-aura-black/80 backdrop-blur-md border border-aura-border text-aura-goldLight">
+                  <i data-lucide="shield" class="w-3 h-3 text-aura-gold"></i>
+                  Defense-Grade Security
+                </span>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-aura-charcoal border border-aura-border flex items-center justify-center text-aura-gold mb-6 group-hover:border-aura-gold transition-colors">
+                  <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-serif font-bold text-white mb-3 group-hover:text-aura-gold transition-colors">
+                  Integrated Estate Security
+                </h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                  Perimeter AI thermal surveillance, encrypted biometric access control, invisible glass-break sensors, and instant armed concierge dispatch with zero false alarms.
+                </p>
+                <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-aura-gold shrink-0"></i>
+                    <span>Facial & biometric gateway verification</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-aura-gold shrink-0"></i>
+                    <span>Autonomous vehicle license plate recognition</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-aura-gold shrink-0"></i>
+                    <span>Safe room automated lockdown protocols</span>
+                  </li>
+                </ul>
+              </div>
+
+              <a href="#booking" class="inline-flex items-center gap-2 text-sm font-semibold text-aura-gold hover:text-white transition-colors group-hover:translate-x-1 duration-200">
+                <span>Secure Your Estate</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Service Card 3: Multi-Room Audio -->
+          <article class="group relative rounded-2xl bg-aura-surface border border-aura-border overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-aura-gold/60 hover:shadow-2xl hover:shadow-aura-gold/10 flex flex-col">
+            <!-- Card Image -->
+            <div class="relative h-64 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1000&q=80" 
+                alt="Audiophile listening lounge with acoustic room treatment" 
+                class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 filter brightness-90"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-aura-surface via-aura-surface/40 to-transparent"></div>
+              <div class="absolute top-4 left-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-aura-black/80 backdrop-blur-md border border-aura-border text-aura-goldLight">
+                  <i data-lucide="music" class="w-3 h-3 text-aura-gold"></i>
+                  Hi-Res Audio 192kHz/24-bit
+                </span>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-aura-charcoal border border-aura-border flex items-center justify-center text-aura-gold mb-6 group-hover:border-aura-gold transition-colors">
+                  <i data-lucide="speaker" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-serif font-bold text-white mb-3 group-hover:text-aura-gold transition-colors">
+                  Multi-Room Audio & Cinema
+                </h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                  Concealed Sonance architectural speakers plastered into your drywall for true invisible sound, paired with synchronized multi-zone playback and custom Dolby Atmos home screening rooms.
+                </p>
+                <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-aura-gold shrink-0"></i>
+                    <span>Invisible in-wall speaker engineering</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-aura-gold shrink-0"></i>
+                    <span>Lossless uncompressed streaming across 32+ zones</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-aura-gold shrink-0"></i>
+                    <span>Custom acoustic calibration by THX certified engineers</span>
+                  </li>
+                </ul>
+              </div>
+
+              <a href="#booking" class="inline-flex items-center gap-2 text-sm font-semibold text-aura-gold hover:text-white transition-colors group-hover:translate-x-1 duration-200">
+                <span>Explore Acoustic Solutions</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Integrated Climate Note -->
+        <div class="mt-12 p-6 rounded-2xl bg-aura-surface/60 border border-aura-border flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-aura-charcoal border border-aura-border flex items-center justify-center text-aura-gold shrink-0">
+              <i data-lucide="thermometer-snowflake" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="text-base font-bold text-white">Looking for Precision Climate & Air Quality Automation?</h4>
+              <p class="text-xs text-slate-400">We seamlessly calibrate multi-stage geothermal HVAC, humidity regulation, and HEPA air purification systems into your central automation hub.</p>
+            </div>
+          </div>
+          <a href="#booking" class="whitespace-nowrap px-6 py-2.5 rounded-full text-xs font-semibold bg-aura-charcoal border border-aura-border text-slate-200 hover:text-aura-gold hover:border-aura-gold/40 transition-colors">
+            Inquire About Climate Systems
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- INTERACTIVE LIVING CONSOLE (REAL-TIME ARCHITECTURAL SCENE SIMULATOR) -->
+    <!-- ========================================================================= -->
+    <section id="interactive-console" class="py-24 px-6 sm:px-8 bg-aura-charcoal border-t border-aura-border relative overflow-hidden architectural-grid">
+      <div class="max-w-7xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-aura-surface border border-aura-border text-xs font-mono uppercase tracking-wider text-aura-goldLight mb-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Hardware Telemetry &amp; Automation Simulator</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
+              The Aura Living Experience Console
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
+              Experience the orchestration firsthand: select an architectural preset below to adjust circadian color temperature, motorized shading, acoustic streaming, and defense perimeter in real time.
+            </p>
+          </div>
+
+          <!-- Real Protocol Status Indicator -->
+          <div class="flex items-center gap-3 px-4 py-2 rounded-lg bg-aura-surface border border-aura-border font-mono text-xs text-slate-300">
+            <span class="text-slate-500">BUS:</span>
+            <span class="text-emerald-400 font-semibold">LUTRON QSX ONLINE</span>
+            <span class="text-slate-500">|</span>
+            <span class="text-aura-gold">CRESTRON CIP: 0ms</span>
+          </div>
+        </div>
+
+        <!-- Interactive Simulator Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Left Console: Scene Keypad (Physical Keypad Aesthetic) -->
+          <div class="lg:col-span-4 rounded-2xl bg-aura-surface border border-aura-border p-6 flex flex-col justify-between shadow-xl">
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b border-aura-border/70 mb-5">
+                <span class="font-mono text-xs text-slate-400 uppercase tracking-wider">Keypad: Great Room</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-aura-charcoal border border-aura-border text-aura-gold">Palladiom Architectural Finish</span>
+              </div>
+
+              <!-- Scene Buttons (Like real Lutron Palladiom backlit buttons) -->
+              <div class="space-y-3" id="scene-button-group">
+                
+                <button type="button" data-scene="circadian" class="scene-btn active w-full p-4 rounded-xl border text-left transition-all duration-200 flex items-center justify-between bg-aura-charcoal border-aura-gold text-white shadow-md">
+                  <div class="flex items-center gap-3.5">
+                    <div class="scene-icon-box w-9 h-9 rounded-lg bg-aura-gold/15 border border-aura-gold/30 flex items-center justify-center text-aura-gold">
+                      <i data-lucide="sun" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-sm">Circadian Morning</div>
+                      <div class="text-xs text-slate-400 font-mono">5500K • Sheer Shades 100%</div>
+                    </div>
+                  </div>
+                  <span class="indicator-dot w-2 h-2 rounded-full bg-aura-gold shadow-sm shadow-aura-gold"></span>
+                </button>
+
+                <button type="button" data-scene="salon" class="scene-btn w-full p-4 rounded-xl border text-left transition-all duration-200 flex items-center justify-between bg-aura-surface border-aura-border text-slate-300 hover:border-aura-gold/50 hover:bg-aura-surfaceHover">
+                  <div class="flex items-center gap-3.5">
+                    <div class="scene-icon-box w-9 h-9 rounded-lg bg-aura-charcoal border border-aura-border flex items-center justify-center text-slate-400">
+                      <i data-lucide="glass-water" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-sm">Evening Entertaining</div>
+                      <div class="text-xs text-slate-400 font-mono">2400K Warm Dim • Acoustic Jazz</div>
+                    </div>
+                  </div>
+                  <span class="indicator-dot w-2 h-2 rounded-full bg-slate-600"></span>
+                </button>
+
+                <button type="button" data-scene="cinema" class="scene-btn w-full p-4 rounded-xl border text-left transition-all duration-200 flex items-center justify-between bg-aura-surface border-aura-border text-slate-300 hover:border-aura-gold/50 hover:bg-aura-surfaceHover">
+                  <div class="flex items-center gap-3.5">
+                    <div class="scene-icon-box w-9 h-9 rounded-lg bg-aura-charcoal border border-aura-border flex items-center justify-center text-slate-400">
+                      <i data-lucide="film" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-sm">Private Dolby Cinema</div>
+                      <div class="text-xs text-slate-400 font-mono">0.5% Cove • Blackout Shades 100%</div>
+                    </div>
+                  </div>
+                  <span class="indicator-dot w-2 h-2 rounded-full bg-slate-600"></span>
+                </button>
+
+                <button type="button" data-scene="night" class="scene-btn w-full p-4 rounded-xl border text-left transition-all duration-200 flex items-center justify-between bg-aura-surface border-aura-border text-slate-300 hover:border-aura-gold/50 hover:bg-aura-surfaceHover">
+                  <div class="flex items-center gap-3.5">
+                    <div class="scene-icon-box w-9 h-9 rounded-lg bg-aura-charcoal border border-aura-border flex items-center justify-center text-slate-400">
+                      <i data-lucide="shield" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-sm">Night Perimeter Armed</div>
+                      <div class="text-xs text-slate-400 font-mono">Footlights Only • Thermal Active</div>
+                    </div>
+                  </div>
+                  <span class="indicator-dot w-2 h-2 rounded-full bg-slate-600"></span>
+                </button>
+
+              </div>
+            </div>
+
+            <!-- Manual Fine-Tuning Dials -->
+            <div class="mt-6 pt-5 border-t border-aura-border/70 space-y-4">
+              <div>
+                <div class="flex justify-between text-xs font-mono text-slate-300 mb-1.5">
+                  <span>Architectural Dimming Level</span>
+                  <span id="dimmer-val" class="text-aura-gold font-bold">85%</span>
+                </div>
+                <input id="dimmer-slider" type="range" min="0" max="100" value="85" class="w-full h-1.5 bg-aura-charcoal rounded-lg appearance-none cursor-pointer accent-aura-gold" />
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-mono text-slate-300 mb-1.5">
+                  <span>Sonance Invisible Zone Volume</span>
+                  <span id="volume-val" class="text-aura-gold font-bold">42 dB</span>
+                </div>
+                <input id="volume-slider" type="range" min="0" max="85" value="42" class="w-full h-1.5 bg-aura-charcoal rounded-lg appearance-none cursor-pointer accent-aura-gold" />
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Console: Residence Visualizer & Live Architectural State -->
+          <div class="lg:col-span-8 rounded-2xl bg-aura-surface border border-aura-border p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+            
+            <!-- Live Ambient Viewport Frame -->
+            <div class="relative rounded-xl overflow-hidden h-72 sm:h-80 border border-aura-border/80 group">
+              <!-- Backdrop Interior Photo that changes lighting filter via CSS/JS -->
+              <img 
+                id="viewport-image"
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" 
+                alt="Great room architectural automation view"
+                class="w-full h-full object-cover transition-all duration-700 filter brightness-95"
+              />
+
+              <!-- Overlay Lighting Filter -->
+              <div id="viewport-light-filter" class="absolute inset-0 bg-sky-200/10 mix-blend-screen transition-all duration-700 pointer-events-none"></div>
+
+              <!-- HUD Overlay in Viewport -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+                <span id="hud-scene-title" class="px-3 py-1 rounded bg-aura-black/85 backdrop-blur-md border border-aura-border font-mono text-xs text-white">
+                  SCENE: CIRCADIAN DAYLIGHT (5500K)
+                </span>
+                <span id="hud-audio-track" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded bg-aura-black/85 backdrop-blur-md border border-aura-border font-mono text-xs text-aura-gold">
+                  <i data-lucide="music-2" class="w-3 h-3"></i>
+                  <span>FLAC 192kHz/24-bit Lossless</span>
+                </span>
+              </div>
+
+              <!-- Bottom Real-time Telemetry Bar -->
+              <div class="absolute bottom-4 left-4 right-4 p-3 rounded-lg bg-aura-black/90 backdrop-blur-md border border-aura-border font-mono text-xs grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+                <div>
+                  <div class="text-[10px] text-slate-500 uppercase">CCT Kelvins</div>
+                  <div id="telemetry-cct" class="text-white font-bold">5,500 K (Daylight)</div>
+                </div>
+                <div>
+                  <div class="text-[10px] text-slate-500 uppercase">Motorized Shades</div>
+                  <div id="telemetry-shades" class="text-white font-bold">Open (100%)</div>
+                </div>
+                <div>
+                  <div class="text-[10px] text-slate-500 uppercase">Climate Temp</div>
+                  <div id="telemetry-climate" class="text-white font-bold">71.5°F (Geothermal)</div>
+                </div>
+                <div>
+                  <div class="text-[10px] text-slate-500 uppercase">Perimeter State</div>
+                  <div id="telemetry-security" class="text-emerald-400 font-bold">Armed Outer Fence</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Architectural Hardware Specification Legend -->
+            <div class="mt-6 pt-4 border-t border-aura-border/60 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="cpu" class="w-4 h-4 text-aura-gold mt-0.5 shrink-0"></i>
+                <div>
+                  <div class="font-bold text-white">Local Core Logic</div>
+                  <div class="text-slate-400 text-[11px]">Crestron VC-4 Linux server on shielded VLAN</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="zap" class="w-4 h-4 text-aura-gold mt-0.5 shrink-0"></i>
+                <div>
+                  <div class="font-bold text-white">Ultra-Low Voltage DMX</div>
+                  <div class="text-slate-400 text-[11px]">0.1% flicker-free Ketra architectural optics</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="radio" class="w-4 h-4 text-aura-gold mt-0.5 shrink-0"></i>
+                <div>
+                  <div class="font-bold text-white">Private Voice Integration</div>
+                  <div class="text-slate-400 text-[11px]">Josh.ai on-premise hardware microphone pods</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- ========================================================================= -->
+    <section id="why-us" class="py-24 px-6 sm:px-8 bg-aura-charcoal border-y border-aura-border/70 relative overflow-hidden">
+      <!-- Ambient Backlight -->
+      <div class="absolute -right-32 top-1/2 -translate-y-1/2 w-96 h-96 bg-aura-gold/10 rounded-full blur-[140px] pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Story & Philosophy -->
+          <div class="lg:col-span-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-aura-surface border border-aura-border text-xs font-semibold uppercase tracking-[0.2em] text-aura-gold mb-4">
+              <i data-lucide="gem" class="w-3.5 h-3.5"></i>
+              <span>Unrivaled Craftsmanship</span>
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold tracking-tight text-white mb-6 leading-tight">
+              Why Discerning Architects & Homeowners Entrust AuraHome.
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed mb-8">
+              Mass-market smart gadgets produce fragmented apps, clutter, and security vulnerabilities. AuraHome builds centralized, enterprise-grade ecosystems engineered directly into your residence’s electrical infrastructure.
+            </p>
+
+            <!-- Feature Bullet Pillars -->
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-aura-surface border border-aura-border flex items-center justify-center text-aura-gold shrink-0 mt-0.5">
+                  <i data-lucide="server" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-white mb-1">Centralized Equipment Vaults</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">No unsightly wires, plastic switches, or router blinking lights. All processing hardware is racked in climate-controlled server enclosures.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-aura-surface border border-aura-border flex items-center justify-center text-aura-gold shrink-0 mt-0.5">
+                  <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-white mb-1">Strict Privacy & Local Processing</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">Your data never leaves your home. Automation scripts execute locally without cloud dependency, guaranteeing instant sub-millisecond response times even during internet outages.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-aura-surface border border-aura-border flex items-center justify-center text-aura-gold shrink-0 mt-0.5">
+                  <i data-lucide="wrench" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-white mb-1">Lifetime White-Glove Concierge</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">Remote firmware diagnostics, proactive battery replenishment for micro-sensors, and emergency on-site technician dispatch in under 2 hours.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Architectural Showcase & Stats Grid -->
+          <div class="lg:col-span-6 flex flex-col gap-6" id="stats">
+            
+            <!-- Highlight Image Box -->
+            <div class="relative rounded-2xl overflow-hidden border border-aura-border shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" 
+                alt="Private estate architectural smart living room and glass terrace" 
+                class="w-full h-64 sm:h-72 object-cover object-center filter brightness-90"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-aura-surface via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-6 right-6 flex items-center justify-between text-xs text-slate-300">
+                <span class="font-medium text-white flex items-center gap-1.5">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5 text-aura-gold"></i>
+                  The Bel Air Estate Project
+                </span>
+                <span class="bg-aura-black/80 px-2.5 py-1 rounded-md border border-aura-border text-aura-gold">
+                  14,000 sq ft Fully Automated
+                </span>
+              </div>
+            </div>
+
+            <!-- Stats Counters (4 Visual Counter Cards) -->
+            <div class="grid grid-cols-2 gap-4">
+              
+              <div class="p-6 rounded-2xl bg-aura-surface border border-aura-border hover:border-aura-gold/40 transition-colors group">
+                <div class="text-3xl sm:text-4xl font-serif font-bold text-white group-hover:text-aura-gold transition-colors flex items-baseline gap-1">
+                  <span>500</span><span class="text-aura-gold">+</span>
+                </div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mt-2">Homes Automated</p>
+                <p class="text-[11px] text-slate-500 mt-1">Across California, New York & Aspen</p>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-aura-surface border border-aura-border hover:border-aura-gold/40 transition-colors group">
+                <div class="text-3xl sm:text-4xl font-serif font-bold text-white group-hover:text-aura-gold transition-colors flex items-baseline gap-1">
+                  <span>99.99</span><span class="text-aura-gold">%</span>
+                </div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mt-2">Uptime & Reliability</p>
+                <p class="text-[11px] text-slate-500 mt-1">Dual redundant failover controllers</p>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-aura-surface border border-aura-border hover:border-aura-gold/40 transition-colors group">
+                <div class="text-3xl sm:text-4xl font-serif font-bold text-white group-hover:text-aura-gold transition-colors flex items-baseline gap-1">
+                  <span>24/7</span>
+                </div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mt-2">VIP Concierge Care</p>
+                <p class="text-[11px] text-slate-500 mt-1">Dedicated private account engineer</p>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-aura-surface border border-aura-border hover:border-aura-gold/40 transition-colors group">
+                <div class="text-3xl sm:text-4xl font-serif font-bold text-white group-hover:text-aura-gold transition-colors flex items-baseline gap-1">
+                  <span>15</span><span class="text-aura-gold">+</span>
+                </div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mt-2">Years Excellence</p>
+                <p class="text-[11px] text-slate-500 mt-1">Awarded Luxury Integrator of the Year</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- TESTIMONIALS / CASE STUDIES HIGHLIGHT -->
+    <!-- ========================================================================= -->
+    <section id="testimonials" class="py-24 px-6 sm:px-8 bg-aura-black relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <p class="text-xs uppercase tracking-[0.25em] text-aura-gold font-semibold mb-3">Client Accolades</p>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">
+            Praise From Leading Architects & Estate Owners
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="p-8 rounded-2xl bg-aura-surface/70 border border-aura-border flex flex-col justify-between">
+            <div>
+              <div class="flex text-aura-gold mb-4 gap-1">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-slate-300 text-sm italic leading-relaxed mb-6">
+                "AuraHome understands high architecture. Rather than slapping bulky touchscreens on our Venetian plaster walls, their custom metallic keypads look like fine jewelry. The whole property flows effortlessly."
+              </p>
+            </div>
+            <div class="border-t border-aura-border/60 pt-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-aura-charcoal border border-aura-border flex items-center justify-center font-serif text-aura-gold font-bold">
+                EW
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white">Elena Whitmore</p>
+                <p class="text-[11px] text-slate-400">Principal, Whitmore Architecture Group</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-aura-surface/70 border border-aura-border flex flex-col justify-between">
+            <div>
+              <div class="flex text-aura-gold mb-4 gap-1">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-slate-300 text-sm italic leading-relaxed mb-6">
+                "The acoustic invisible audio in our Aspen residence is uncanny. Guests constantly ask where the music is coming from. And when we travel, the automated security lockdown gives us complete peace of mind."
+              </p>
+            </div>
+            <div class="border-t border-aura-border/60 pt-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-aura-charcoal border border-aura-border flex items-center justify-center font-serif text-aura-gold font-bold">
+                JM
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white">Julian Montgomery</p>
+                <p class="text-[11px] text-slate-400">Estate Owner, Aspen & Malibu</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-aura-surface/70 border border-aura-border flex flex-col justify-between">
+            <div>
+              <div class="flex text-aura-gold mb-4 gap-1">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-slate-300 text-sm italic leading-relaxed mb-6">
+                "Their white-glove engineering team integrated seamlessly with our general contractor during our 2-year ground-up build. Zero delays, immaculate wire dressing, and flawless post-move-in support."
+              </p>
+            </div>
+            <div class="border-t border-aura-border/60 pt-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-aura-charcoal border border-aura-border flex items-center justify-center font-serif text-aura-gold font-bold">
+                RK
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white">Robert & Chloe Kensington</p>
+                <p class="text-[11px] text-slate-400">Tribeca Penthouse, NYC</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- 5. INTERACTIVE CONTACT / BOOKING FORM -->
+    <!-- ========================================================================= -->
+    <section id="booking" class="py-28 px-6 sm:px-8 bg-gradient-to-b from-aura-black via-aura-charcoal to-aura-black relative">
+      <!-- Ambient Glow Behind Form -->
+      <div class="ambient-glow absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-aura-gold/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-aura-surface/80 border border-aura-border/90 rounded-3xl p-8 sm:p-12 shadow-2xl backdrop-blur-xl">
+          
+          <!-- Form Left Column: Discovery Concierge Info -->
+          <div class="lg:col-span-5 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-aura-border pb-8 lg:pb-0 lg:pr-10">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-aura-charcoal border border-aura-border text-xs font-semibold uppercase tracking-[0.2em] text-aura-gold mb-4">
+                <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                <span>Private Consultation</span>
+              </div>
+              <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
+                Begin Your Residence Transformation
+              </h2>
+              <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                Every project begins with a private blueprint consultation. Our senior systems architects review your floor plans, lifestyle requirements, and design goals.
+              </p>
+
+              <!-- Consultation Steps -->
+              <div class="space-y-4 mb-8">
+                <div class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-aura-charcoal border border-aura-gold/60 text-aura-gold text-xs font-bold flex items-center justify-center shrink-0">1</span>
+                  <span class="text-xs text-slate-300 font-medium">Initial 30-min architectural scope & lifestyle discovery</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-aura-charcoal border border-aura-gold/60 text-aura-gold text-xs font-bold flex items-center justify-center shrink-0">2</span>
+                  <span class="text-xs text-slate-300 font-medium">Comprehensive CAD electrical schematic & budget roadmap</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-aura-charcoal border border-aura-gold/60 text-aura-gold text-xs font-bold flex items-center justify-center shrink-0">3</span>
+                  <span class="text-xs text-slate-300 font-medium">White-glove installation with lifetime concierge maintenance</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct VIP Contacts -->
+            <div class="pt-6 border-t border-aura-border/60 space-y-3">
+              <div class="flex items-center gap-3 text-xs text-slate-300">
+                <i data-lucide="phone-call" class="w-4 h-4 text-aura-gold"></i>
+                <span class="font-medium">+1 (800) 492-AURA</span>
+                <span class="text-slate-500 text-[10px] uppercase font-bold tracking-wider">(VIP Concierge)</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs text-slate-300">
+                <i data-lucide="mail" class="w-4 h-4 text-aura-gold"></i>
+                <span>concierge@aurahome.luxury</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs text-slate-300">
+                <i data-lucide="map-pin" class="w-4 h-4 text-aura-gold"></i>
+                <span>Beverly Hills • Manhattan • Aspen • Miami</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Right Column: Client Intake Form -->
+          <div class="lg:col-span-7">
+            
+            <!-- Success Confirmation Screen (hidden by default) -->
+            <div id="booking-success-alert" class="hidden flex-col items-center justify-center text-center p-8 bg-aura-charcoal/90 border border-aura-gold/50 rounded-2xl animate-fade-in shadow-2xl">
+              <div class="w-16 h-16 rounded-full bg-aura-gold/15 border border-aura-gold text-aura-gold flex items-center justify-center mb-6 shadow-lg shadow-aura-gold/20">
+                <i data-lucide="check" class="w-8 h-8"></i>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white mb-2">Consultation Confirmed</h3>
+              <p class="text-aura-gold text-sm font-semibold mb-4" id="success-client-name">Thank you for your inquiry</p>
+              <p class="text-slate-300 text-xs leading-relaxed max-w-md mb-6">
+                Your private consultation request has been encrypted and routed to our Senior Systems Architect. You will receive a personal telephone briefing and calendar invite within 24 business hours.
+              </p>
+              <div class="p-4 rounded-xl bg-aura-surface border border-aura-border text-left w-full max-w-md text-xs text-slate-300 mb-6 space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-slate-500">Service Category:</span>
+                  <span class="font-semibold text-white" id="success-service-summary">Whole-Home Automation</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-500">Reference Token:</span>
+                  <span class="font-mono text-aura-gold" id="success-reference-id">AUR-84920</span>
+                </div>
+              </div>
+              <button type="button" id="reset-booking-form-btn" class="px-6 py-2.5 rounded-full text-xs font-semibold bg-aura-surface border border-aura-border text-slate-200 hover:text-white hover:border-aura-gold transition-colors">
+                Submit Another Inquiry
+              </button>
+            </div>
+
+            <!-- Main Interactive Form -->
+            <form id="consultation-form" class="space-y-5" novalidate>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <!-- Name -->
+                <div>
+                  <label for="client-name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                    Full Name <span class="text-aura-gold">*</span>
+                  </label>
+                  <div class="relative">
+                    <input 
+                      type="text" 
+                      id="client-name" 
+                      name="client_name" 
+                      required 
+                      placeholder="Lord Harrison Croft" 
+                      class="w-full bg-aura-charcoal border border-aura-border rounded-xl px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-aura-gold focus:ring-1 focus:ring-aura-gold transition-colors"
+                    />
+                  </div>
+                  <p id="error-client-name" class="hidden text-[11px] text-rose-400 mt-1">Please enter your full name.</p>
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label for="client-email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                    Email Address <span class="text-aura-gold">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    id="client-email" 
+                    name="client_email" 
+                    required 
+                    placeholder="harrison@estate.com" 
+                    class="w-full bg-aura-charcoal border border-aura-border rounded-xl px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-aura-gold focus:ring-1 focus:ring-aura-gold transition-colors"
+                  />
+                  <p id="error-client-email" class="hidden text-[11px] text-rose-400 mt-1">Please enter a valid email address.</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <!-- Phone -->
+                <div>
+                  <label for="client-phone" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                    Phone / Mobile <span class="text-aura-gold">*</span>
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="client-phone" 
+                    name="client_phone" 
+                    required 
+                    placeholder="+1 (310) 555-0198" 
+                    class="w-full bg-aura-charcoal border border-aura-border rounded-xl px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-aura-gold focus:ring-1 focus:ring-aura-gold transition-colors"
+                  />
+                  <p id="error-client-phone" class="hidden text-[11px] text-rose-400 mt-1">Please enter a direct phone number.</p>
+                </div>
+
+                <!-- Service Needed Dropdown -->
+                <div>
+                  <label for="service-needed" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                    Service Needed <span class="text-aura-gold">*</span>
+                  </label>
+                  <div class="relative">
+                    <select 
+                      id="service-needed" 
+                      name="service_needed" 
+                      required 
+                      class="w-full bg-aura-charcoal border border-aura-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-aura-gold focus:ring-1 focus:ring-aura-gold transition-colors appearance-none cursor-pointer"
+                    >
+                      <option value="Whole-Home Automation">Whole-Home Automation Ecosystem</option>
+                      <option value="Smart Architectural Lighting">Architectural Smart Lighting & Shading</option>
+                      <option value="Integrated Estate Security">Military-Grade Integrated Security</option>
+                      <option value="Multi-Room Audio & Cinema">Multi-Room Audio & Dolby Cinema</option>
+                      <option value="Precision Climate & Air Quality">Precision Climate & Air Purification</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
+                      <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Estate Size / Scope -->
+              <div>
+                <label for="property-scope" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                  Estimated Property Scope
+                </label>
+                <div class="relative">
+                  <select 
+                    id="property-scope" 
+                    name="property_scope" 
+                    class="w-full bg-aura-charcoal border border-aura-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-aura-gold focus:ring-1 focus:ring-aura-gold transition-colors appearance-none cursor-pointer"
+                  >
+                    <option value="Luxury Penthouse / Residence (Under 4,000 sq ft)">Luxury Penthouse / Residence (Under 4,000 sq ft)</option>
+                    <option value="Private Estate (4,000 - 8,000 sq ft)" selected>Private Estate (4,000 – 8,000 sq ft)</option>
+                    <option value="Super-Prime Estate (8,000 - 15,000+ sq ft)">Super-Prime Estate (8,000 – 15,000+ sq ft)</option>
+                    <option value="New Architectural Construction / Ground-Up">New Architectural Construction / Ground-Up</option>
+                  </select>
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
+                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Details -->
+              <div>
+                <label for="project-details" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                  Project Details & Vision <span class="text-aura-gold">*</span>
+                </label>
+                <textarea 
+                  id="project-details" 
+                  name="project_details" 
+                  rows="4" 
+                  required 
+                  placeholder="Tell us about your estate, architectural timeline, specific acoustic or lighting goals, or any existing systems..." 
+                  class="w-full bg-aura-charcoal border border-aura-border rounded-xl p-4 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-aura-gold focus:ring-1 focus:ring-aura-gold transition-colors"
+                ></textarea>
+                <p id="error-project-details" class="hidden text-[11px] text-rose-400 mt-1">Please provide a brief overview of your property requirements.</p>
+              </div>
+
+              <!-- Submit CTA Button -->
+              <div class="pt-2">
+                <button 
+                  type="submit" 
+                  id="submit-booking-btn" 
+                  class="w-full inline-flex items-center justify-center gap-3 py-4 px-8 rounded-xl font-semibold text-aura-black bg-gradient-to-r from-aura-goldLight via-aura-gold to-aura-goldHover shadow-xl shadow-aura-gold/20 hover:shadow-aura-gold/40 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 cursor-pointer text-sm"
+                >
+                  <span id="btn-text">Request Private Consultation</span>
+                  <i id="btn-icon" data-lucide="send" class="w-4 h-4"></i>
+                  <span id="btn-spinner" class="hidden">
+                    <i data-lucide="loader-2" class="w-4 h-4 animate-spin text-aura-black"></i>
+                  </span>
+                </button>
+                <p class="text-center text-[11px] text-slate-500 mt-3 flex items-center justify-center gap-1.5">
+                  <i data-lucide="shield" class="w-3 h-3 text-aura-gold"></i>
+                  Strict non-disclosure confidentiality guaranteed. Your information is never shared.
+                </p>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- 6. FOOTER -->
+    <!-- ========================================================================= -->
+    <footer class="bg-aura-black border-t border-aura-border pt-16 pb-12 px-6 sm:px-8 text-slate-400 text-xs">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-aura-border/60">
+          
+          <!-- Column 1 & 2: Brand Info -->
+          <div class="lg:col-span-2">
+            <a href="#" class="flex items-center gap-3.5 group mb-4">
+              <div class="w-10 h-10 rounded-lg bg-aura-surface border border-aura-border flex items-center justify-center p-2 shadow-inner group-hover:border-aura-gold/70 transition-all">
+                <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                  <path d="M22 4L39 37H31.5L22 17.5L12.5 37H5L22 4Z" fill="#E8D4B0" />
+                  <polygon points="22,12 30,30 14,30" stroke="#0F1219" stroke-width="1.8" fill="#161B26" />
+                  <circle cx="22" cy="24" r="2.8" fill="#C5A059" />
+                  <line x1="22" y1="4" x2="22" y2="10" stroke="#E8D4B0" stroke-width="1.5" stroke-linecap="round" />
+                  <line x1="12" y1="37" x2="32" y2="37" stroke="#E8D4B0" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xl font-display font-bold tracking-[0.2em] text-white">AURA<span class="text-aura-gold">HOME</span></span>
+                <span class="font-mono text-[9px] uppercase tracking-[0.28em] text-slate-400 font-medium -mt-0.5">
+                  Architectural Systems • CEDIA
+                </span>
+              </div>
+            </a>
+            <p class="text-slate-400 text-xs leading-relaxed max-w-sm mb-6">
+              AuraHome Automation is the licensed CEDIA master integrator for discerning architects, builders, and estate owners. Engineered with discrete architectural reveals, zero visual clutter, and sovereign local processing.
+            </p>
+            <div class="flex items-center gap-3 text-slate-400">
+              <a href="#" class="w-9 h-9 rounded-lg bg-aura-surface border border-aura-border flex items-center justify-center hover:text-aura-gold hover:border-aura-gold/50 transition-colors" aria-label="AuraHome Instagram">
+                <i data-lucide="instagram" class="w-4 h-4"></i>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-lg bg-aura-surface border border-aura-border flex items-center justify-center hover:text-aura-gold hover:border-aura-gold/50 transition-colors" aria-label="AuraHome LinkedIn">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-lg bg-aura-surface border border-aura-border flex items-center justify-center hover:text-aura-gold hover:border-aura-gold/50 transition-colors" aria-label="AuraHome Twitter/X">
+                <i data-lucide="twitter" class="w-4 h-4"></i>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-lg bg-aura-surface border border-aura-border flex items-center justify-center hover:text-aura-gold hover:border-aura-gold/50 transition-colors" aria-label="AuraHome YouTube">
+                <i data-lucide="youtube" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 3: Systems -->
+          <div>
+            <h4 class="text-white font-semibold text-xs uppercase tracking-wider mb-4 font-sans">Engineering</h4>
+            <ul class="space-y-2.5">
+              <li><a href="#services" class="hover:text-aura-gold transition-colors">Architectural Lighting</a></li>
+              <li><a href="#services" class="hover:text-aura-gold transition-colors">Lutron Motorized Shading</a></li>
+              <li><a href="#services" class="hover:text-aura-gold transition-colors">Integrated Estate Security</a></li>
+              <li><a href="#services" class="hover:text-aura-gold transition-colors">Invisible Acoustic Audio</a></li>
+              <li><a href="#services" class="hover:text-aura-gold transition-colors">Private Dolby Screening Rooms</a></li>
+              <li><a href="#services" class="hover:text-aura-gold transition-colors">Central Rack Automation</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Experience & Company -->
+          <div>
+            <h4 class="text-white font-semibold text-xs uppercase tracking-wider mb-4 font-sans">Company</h4>
+            <ul class="space-y-2.5">
+              <li><a href="#why-us" class="hover:text-aura-gold transition-colors">Why AuraHome</a></li>
+              <li><a href="#stats" class="hover:text-aura-gold transition-colors">Integrator Credentials</a></li>
+              <li><a href="#testimonials" class="hover:text-aura-gold transition-colors">Architectural Portfolios</a></li>
+              <li><a href="#interactive-console" class="hover:text-aura-gold transition-colors">Living Console Simulator</a></li>
+              <li><a href="#booking" class="hover:text-aura-gold transition-colors">Trade Partner Program</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Showrooms -->
+          <div>
+            <h4 class="text-white font-semibold text-xs uppercase tracking-wider mb-4 font-sans">Private Showrooms</h4>
+            <ul class="space-y-2 text-[11px] text-slate-400">
+              <li><strong class="text-white">Beverly Hills:</strong> 9601 Wilshire Blvd</li>
+              <li><strong class="text-white">Manhattan:</strong> 432 Park Ave Gallery</li>
+              <li><strong class="text-white">Aspen:</strong> 420 E Cooper Ave</li>
+              <li><strong class="text-white">Miami:</strong> Brickell Financial District</li>
+              <li class="pt-2 text-aura-gold font-medium">By Private Appointment Only</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+          <p>© 2026 AuraHome Automation Inc. All rights reserved. Licensed Low-Voltage Systems Integrator. The Future of Living, Tailored to You.</p>
+          <div class="flex items-center gap-6">
+            <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-slate-300 transition-colors">Client Confidentiality Agreement</a>
+            <a href="#" class="hover:text-slate-300 transition-colors">Terms of Engagement</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Floating Button -->
+    <button 
+      id="scroll-to-top-btn" 
+      type="button" 
+      class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-aura-surface/90 border border-aura-border text-aura-gold shadow-xl opacity-0 pointer-events-none transition-all duration-300 hover:bg-aura-surfaceHover hover:border-aura-gold/50"
+      aria-label="Scroll back to top"
+    >
+      <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+
+    <!-- ========================================================================= -->
+    <!-- JAVASCRIPT INTERACTIONS -->
+    <!-- ========================================================================= -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Initialize Lucide Icons
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+
+        // 1. Transparent to Solid Header on Scroll
+        const header = document.getElementById('main-header');
+        const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+
+        const handleScroll = () => {
+          const scrollY = window.scrollY;
+          if (scrollY > 30) {
+            header.classList.add('bg-aura-charcoal/95', 'backdrop-blur-md', 'border-b', 'border-aura-border/80', 'py-3.5', 'shadow-2xl');
+            header.classList.remove('bg-aura-black/60', 'py-4');
+          } else {
+            header.classList.remove('bg-aura-charcoal/95', 'backdrop-blur-md', 'border-b', 'border-aura-border/80', 'py-3.5', 'shadow-2xl');
+            header.classList.add('bg-aura-black/60', 'py-4');
+          }
+
+          // Scroll to top button visibility
+          if (scrollY > 400) {
+            scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+            scrollToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+          } else {
+            scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+            scrollToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+          }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+
+        // Scroll to top action
+        scrollToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 2. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        const toggleMobileMenu = () => {
+          const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+          mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+          
+          if (!isExpanded) {
+            mobileMenu.classList.remove('hidden');
+            menuIconOpen.classList.add('hidden');
+            menuIconClose.classList.remove('hidden');
+          } else {
+            mobileMenu.classList.add('hidden');
+            menuIconOpen.classList.remove('hidden');
+            menuIconClose.classList.add('hidden');
+          }
+        };
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when clicking any nav link
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('hidden')) {
+              toggleMobileMenu();
+            }
+          });
+        });
+
+        // 3. LIVING SCENE CONSOLE INTERACTIONS
+        const sceneButtons = document.querySelectorAll('.scene-btn');
+        const viewportImg = document.getElementById('viewport-image');
+        const viewportFilter = document.getElementById('viewport-light-filter');
+        const hudTitle = document.getElementById('hud-scene-title');
+        const hudAudio = document.getElementById('hud-audio-track');
+        const telemetryCct = document.getElementById('telemetry-cct');
+        const telemetryShades = document.getElementById('telemetry-shades');
+        const telemetryClimate = document.getElementById('telemetry-climate');
+        const telemetrySecurity = document.getElementById('telemetry-security');
+
+        const dimmerSlider = document.getElementById('dimmer-slider');
+        const dimmerVal = document.getElementById('dimmer-val');
+        const volumeSlider = document.getElementById('volume-slider');
+        const volumeVal = document.getElementById('volume-val');
+
+        const scenes = {
+          circadian: {
+            title: 'SCENE: CIRCADIAN DAYLIGHT (5500K)',
+            audio: 'FLAC 192kHz/24-bit Lossless',
+            cct: '5,500 K (Daylight)',
+            shades: 'Open (100%)',
+            climate: '71.5°F (Geothermal)',
+            security: 'Armed Outer Fence',
+            dimmer: 85,
+            volume: 42,
+            imgBrightness: 95,
+            filterClass: 'bg-sky-200/10 mix-blend-screen'
+          },
+          salon: {
+            title: 'SCENE: EVENING SALON (2400K WARM DIM)',
+            audio: 'Acoustic Jazz Lossless Stream',
+            cct: '2,400 K (Amber Glow)',
+            shades: 'Motorized Sheers (50%)',
+            climate: '70.0°F (Fireplace Sync)',
+            security: 'Armed Perimeter Active',
+            dimmer: 45,
+            volume: 52,
+            imgBrightness: 78,
+            filterClass: 'bg-amber-600/25 mix-blend-color'
+          },
+          cinema: {
+            title: 'SCENE: PRIVATE DOLBY CINEMA (0.5% COVE)',
+            audio: 'Dolby Atmos 9.4.6 Discrete',
+            cct: '2,000 K (Accent Sconce)',
+            shades: 'Motorized Blackout (100%)',
+            climate: '68.5°F (Silent CFM)',
+            security: 'Armed Interior & Exterior',
+            dimmer: 12,
+            volume: 72,
+            imgBrightness: 50,
+            filterClass: 'bg-indigo-950/40 mix-blend-multiply'
+          },
+          night: {
+            title: 'SCENE: NIGHT PERIMETER (THERMAL DEFENSE)',
+            audio: 'Audio Muted / Guard Pods Active',
+            cct: '1,800 K (Subtle Floor Path)',
+            shades: 'Blackout Shading Locked',
+            climate: '67.0°F (Night Conservation)',
+            security: 'MAX ARMED: Biometric Guard',
+            dimmer: 5,
+            volume: 0,
+            imgBrightness: 38,
+            filterClass: 'bg-cyan-950/50 mix-blend-overlay'
+          }
+        };
+
+        const updateScene = (sceneKey) => {
+          const s = scenes[sceneKey];
+          if (!s) return;
+
+          // Update Button Styles
+          sceneButtons.forEach(btn => {
+            const isMatch = btn.getAttribute('data-scene') === sceneKey;
+            const iconBox = btn.querySelector('.scene-icon-box');
+            const dot = btn.querySelector('.indicator-dot');
+
+            if (isMatch) {
+              btn.classList.remove('bg-aura-surface', 'border-aura-border', 'text-slate-300');
+              btn.classList.add('bg-aura-charcoal', 'border-aura-gold', 'text-white', 'shadow-md');
+              if (iconBox) {
+                iconBox.classList.remove('bg-aura-charcoal', 'border-aura-border', 'text-slate-400');
+                iconBox.classList.add('bg-aura-gold/15', 'border-aura-gold/30', 'text-aura-gold');
+              }
+              if (dot) {
+                dot.classList.remove('bg-slate-600');
+                dot.classList.add('bg-aura-gold', 'shadow-sm', 'shadow-aura-gold');
+              }
+            } else {
+              btn.classList.add('bg-aura-surface', 'border-aura-border', 'text-slate-300');
+              btn.classList.remove('bg-aura-charcoal', 'border-aura-gold', 'text-white', 'shadow-md');
+              if (iconBox) {
+                iconBox.classList.add('bg-aura-charcoal', 'border-aura-border', 'text-slate-400');
+                iconBox.classList.remove('bg-aura-gold/15', 'border-aura-gold/30', 'text-aura-gold');
+              }
+              if (dot) {
+                dot.classList.add('bg-slate-600');
+                dot.classList.remove('bg-aura-gold', 'shadow-sm', 'shadow-aura-gold');
+              }
+            }
+          });
+
+          // Update HUD & Telemetry
+          hudTitle.textContent = s.title;
+          telemetryCct.textContent = s.cct;
+          telemetryShades.textContent = s.shades;
+          telemetryClimate.textContent = s.climate;
+          telemetrySecurity.textContent = s.security;
+
+          if (hudAudio) {
+            hudAudio.querySelector('span').textContent = s.audio;
+          }
+
+          // Update Sliders
+          if (dimmerSlider && dimmerVal) {
+            dimmerSlider.value = s.dimmer;
+            dimmerVal.textContent = s.dimmer + '%';
+          }
+          if (volumeSlider && volumeVal) {
+            volumeSlider.value = s.volume;
+            volumeVal.textContent = s.volume + ' dB';
+          }
+
+          // Update Viewport
+          if (viewportImg) {
+            viewportImg.style.filter = `brightness(${s.imgBrightness}%) contrast(105%)`;
+          }
+          if (viewportFilter) {
+            viewportFilter.className = `absolute inset-0 transition-all duration-700 pointer-events-none ${s.filterClass}`;
+          }
+        };
+
+        sceneButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const key = btn.getAttribute('data-scene');
+            updateScene(key);
+          });
+        });
+
+        // Fine Tuning Slider Events
+        if (dimmerSlider) {
+          dimmerSlider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            dimmerVal.textContent = val + '%';
+            if (viewportImg) {
+              const calcBright = Math.max(25, Math.min(115, parseInt(val) + 15));
+              viewportImg.style.filter = `brightness(${calcBright}%) contrast(105%)`;
+            }
+          });
+        }
+
+        if (volumeSlider) {
+          volumeSlider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            volumeVal.textContent = val + ' dB';
+          });
+        }
+
+        // 4. Interactive Contact / Booking Form Submission
+        const form = document.getElementById('consultation-form');
+        const successAlert = document.getElementById('booking-success-alert');
+        const resetBtn = document.getElementById('reset-booking-form-btn');
+        const submitBtn = document.getElementById('submit-booking-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnIcon = document.getElementById('btn-icon');
+        const btnSpinner = document.getElementById('btn-spinner');
+
+        const nameInput = document.getElementById('client-name');
+        const emailInput = document.getElementById('client-email');
+        const phoneInput = document.getElementById('client-phone');
+        const serviceInput = document.getElementById('service-needed');
+        const detailsInput = document.getElementById('project-details');
+
+        const errName = document.getElementById('error-client-name');
+        const errEmail = document.getElementById('error-client-email');
+        const errPhone = document.getElementById('error-client-phone');
+        const errDetails = document.getElementById('error-project-details');
+
+        const successClientName = document.getElementById('success-client-name');
+        const successServiceSummary = document.getElementById('success-service-summary');
+        const successRefId = document.getElementById('success-reference-id');
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          let isValid = true;
+
+          // Validate Name
+          if (!nameInput.value.trim()) {
+            errName.classList.remove('hidden');
+            nameInput.classList.add('border-rose-500');
+            isValid = false;
+          } else {
+            errName.classList.add('hidden');
+            nameInput.classList.remove('border-rose-500');
+          }
+
+          // Validate Email
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
+            errEmail.classList.remove('hidden');
+            emailInput.classList.add('border-rose-500');
+            isValid = false;
+          } else {
+            errEmail.classList.add('hidden');
+            emailInput.classList.remove('border-rose-500');
+          }
+
+          // Validate Phone
+          if (!phoneInput.value.trim()) {
+            errPhone.classList.remove('hidden');
+            phoneInput.classList.add('border-rose-500');
+            isValid = false;
+          } else {
+            errPhone.classList.add('hidden');
+            phoneInput.classList.remove('border-rose-500');
+          }
+
+          // Validate Project Details
+          if (!detailsInput.value.trim()) {
+            errDetails.classList.remove('hidden');
+            detailsInput.classList.add('border-rose-500');
+            isValid = false;
+          } else {
+            errDetails.classList.add('hidden');
+            detailsInput.classList.remove('border-rose-500');
+          }
+
+          if (!isValid) return;
+
+          // Show Loading State
+          submitBtn.disabled = true;
+          btnText.textContent = 'Transmitting Encrypted Consultation Request...';
+          btnIcon.classList.add('hidden');
+          btnSpinner.classList.remove('hidden');
+
+          // Simulate Luxury Server Handshake / Intake
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            btnText.textContent = 'Request Private Consultation';
+            btnIcon.classList.remove('hidden');
+            btnSpinner.classList.add('hidden');
+
+            // Populate Success Card
+            const clientNameVal = nameInput.value.trim();
+            const serviceVal = serviceInput.value;
+            const randomId = 'AUR-' + Math.floor(10000 + Math.random() * 90000);
+
+            successClientName.textContent = `Honored to assist, ${clientNameVal}.`;
+            successServiceSummary.textContent = serviceVal;
+            successRefId.textContent = randomId;
+
+            // Show Success Card and Hide Form
+            form.classList.add('hidden');
+            successAlert.classList.remove('hidden');
+            successAlert.classList.add('flex');
+
+            if (window.lucide) {
+              window.lucide.createIcons();
+            }
+
+            // Scroll gently to the confirmation card
+            successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 850);
+        });
+
+        // Reset Booking Form
+        resetBtn.addEventListener('click', () => {
+          form.reset();
+          successAlert.classList.add('hidden');
+          successAlert.classList.remove('flex');
+          form.classList.remove('hidden');
+          if (window.lucide) {
+            window.lucide.createIcons();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
